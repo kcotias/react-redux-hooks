@@ -1,17 +1,18 @@
 import React from "react";
-import reducers from "./reducers/reducers";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-
-const store = createStore(reducers);
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  const timesClicked = useSelector(state => console.log(state));
+  const dispatch = useDispatch();
+  console.log(timesClicked);
   return (
-    <Provider store={store}>
-      <div className="App">
-        <h1>Teste</h1>
-      </div>
-    </Provider>
+    <div className="App">
+      <h1>Numero de cliques</h1>
+      <h1>{timesClicked}</h1>
+      <button onClick={() => dispatch({ type: "TIMES_CLICKED" })}>
+        Clique
+      </button>
+    </div>
   );
 }
 
