@@ -1,4 +1,3 @@
-import { combineReducers } from "redux";
 import { TIMES_CLICKED } from "../actions/actions";
 
 const defaultState = {
