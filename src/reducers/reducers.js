@@ -18,6 +18,4 @@ function clickApp(state = defaultState, action) {
   }
 }
 
-export default combineReducers({
-  clickApp
-});
+export default clickApp;

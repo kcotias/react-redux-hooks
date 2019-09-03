@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-  const timesClicked = useSelector(state => console.log(state));
+  const timesClicked = useSelector(state => state.timesClicked);
   const dispatch = useDispatch();
   console.log(timesClicked);
   return (
